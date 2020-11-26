@@ -24,6 +24,9 @@ body{
 ::before, ::after{
     box-sizing: border-box;
 }
+input,textarea,select{
+    font-family: 'Montserrat', sans-serif;
+}
 
 .section{
     background-color: #f2f2fc;
@@ -101,6 +104,8 @@ body{
     transition: all 0.3s ease;
     display: inline-block;
     white-space: nowrap;
+    border: none;
+    cursor: pointer;
 }
 .btn:hover{
     -webkit-transform: scale(1.05);
@@ -466,6 +471,10 @@ body{
 }
 
 /* Portfolio Section */
+.portfolio .container{
+    padding-bottom: 40px;
+    
+}
 .portfolio .portfolio-filter{
     /* background-color: red; */
     -ms-flex: 0 0 100%;
@@ -491,12 +500,176 @@ body{
     transition: all 0.3s ease;
 }
 .portfolio .portfolio-item{
-    /* look out for width */
-    width: 52em;
-    background-color: red;
     flex: 0 0 33.33%;
     max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item-inner{
+    border: 6px solid #fdf9ff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.portfolio .portfolio-item-inner .portfolio-img{
+    border: 6px solid #fdf9ff;
+    border-radius: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img{
+    width: 100%;
+    display: block;
 }
 .portfolio .portfolio-item .portfolio-info{
-    display: none;
+    position : absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    padding: 30px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info{
+    opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-info h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 0;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info h4{
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.portfolio .portfolio-item .portfolio-info .icon{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+
+
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info .icon{
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.portfolio .portfolio-item .portfolio-info .icon .fa{
+    line-height: 40px;
+}
+
+/* Portfolio Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+.contact .contact-info-item{
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+.contact .contact-info-item .icon{
+    display: inline-block;
+}
+.contact .contact-info-item .icon .fa{
+    font-size: 40px;
+}
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: #302e4d;
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+    .contact .contact-info-item p{
+        font-size: 16px;
+        line-height: 25px;
+        color: #504e70;
+        margin: 0;
+        font-weight: 400;
+    }
+.contact .contact-form{
+    /* background-color: red; */
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .col-6{
+    /* background-color: red; */
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.contact .contact-form .col-12{
+    /* background-color: red; */
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .form-item{
+    margin-bottom: 30px;
+
+}
+.contact .contact-form .form-item .form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #d4d4e3;
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #504e70;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.contact .contact-form .form-item .form-control:focus{
+     -webkit-box-shadow: 0 0 20px rgba(48,46,77,0.15);
+     box-shadow: 0 0 20px rgba(48,46,77,0.15);
+}
+.contact .contact-form .form-item textarea.form-control{
+    height: 140px;
+}
+.contact .contact-form .btn{
+    height: 50px;
+    padding: 0 50px;
 }

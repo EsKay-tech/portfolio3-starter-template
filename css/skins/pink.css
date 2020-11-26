@@ -7,6 +7,8 @@
     border-right: 4px solid #ec1839;
     border-bottom: 4px solid #ec1839;
 }
+.contact .contact-info-item .icon .fa,
+.portfolio .portfolio-item .portfolio-info .icon .fa,
 .portfolio .portfolio-filter button.active,
 .about .about-content .about-text h3 span,
 .aside .nav li a:hover,
